@@ -12,11 +12,7 @@ import sys
 # Complete the handshake function below.
 #
 def handshake(n):
-    sum=0
-    while n!=0:
-        sum=sum+n-1
-        n=n-1
-    return sum
+    return n*(n-1)//2
 
 
 if __name__ == '__main__':
