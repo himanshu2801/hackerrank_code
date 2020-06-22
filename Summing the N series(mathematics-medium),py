@@ -1,0 +1,32 @@
+"""
+Link of the question...
+https://www.hackerrank.com/challenges/summing-the-n-series/problem
+Solution...
+#hint:-We have to focus on the final value of Sn that we will obtain by solving it...if you see it clearly its a sumission of odd series so after solving
+you will obtain Sn=n*n
+"""
+#!/bin/python3
+
+import os
+import sys
+
+#
+# Complete the summingSeries function below.
+#
+def summingSeries(n):
+    return (n*n)%(10**9+7)
+    
+
+if __name__ == '__main__':
+    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+
+    t = int(input())
+
+    for t_itr in range(t):
+        n = int(input())
+
+        result = summingSeries(n)
+
+        fptr.write(str(result) + '\n')
+
+    fptr.close()
